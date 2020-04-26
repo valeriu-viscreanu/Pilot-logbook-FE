@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
-import { ListEditComponent } from './list/list-edit/list-edit.component';
+import { FlightEditComponent } from './list/flight-edit/flight-edit.component';
 import { OverviewComponent } from './list/overview/overview.component';
-import { ListItemComponent } from './list/list-item/list-item.component';
+import { FlightComponent } from './list/flight/flight.component';
 
 
 
 @NgModule({
-  declarations: [ListComponent, ListEditComponent, OverviewComponent, ListItemComponent],
+  declarations: [ListComponent, FlightEditComponent, OverviewComponent, FlightComponent],
   imports: [
     CommonModule
   ],
