@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Flight } from '../flight.model';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +10,12 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
-  testItems: [];
+   Flights: Flight[] =[
+     new Flight ( "DV20",  new Date("2016-01-17"), new Date("2016-01-17"), "Jane Doe"),
+     new Flight ( "DA40", new Date("2016-01-18"), new Date("2016-01-19"), "John Doe")
+   ]
+    
+
   ngOnInit() {
   }
 
