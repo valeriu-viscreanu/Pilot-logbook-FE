@@ -1,7 +1,32 @@
-<div class="row">
-<div class="column-xd-12">
-<a href="#" *ngFor="let flight of Flights" class="list-group-item clearfix">
-   <p> {{flight.aircraft}} --  {{flight.takeoffTime | date: 'd/m/y h:mm'}} -- {{flight.landingTime| date: 'd/m/y h:mm'}} -- {{flight.pilots}}</p>
-    </a>
+<div class="container p-0">
+    <div class="row p-0">
+        <div class="col">
+            <p> Aircraft</p>
+        </div>
+        <div class="col">
+            <p> TO time</p>
+        </div>
+        <div class="col">
+            <p> LNG time</p>
+        </div>
+        <div class="col">
+            <p>  Pilots</p>
+        </div>
     </div>
+    <a href="#" *ngFor="let flight of Flights" class="list-group-item clearfix">
+        <div class="row p-0">
+            <div class="col">
+                <p> {{flight.aircraft}}</p>
+            </div>
+            <div class="col">
+                <p> {{flight.takeoffTime | date: 'd/m/y h:mm'}}</p>
+            </div>
+            <div class="col">
+                <p>  {{flight.landingTime| date: 'd/m/y h:mm'}}</p>
+            </div>
+            <div class="col">
+                <p>  {{flight.pilots}}</p>
+            </div>
+        </div>
+    </a>
 </div>
