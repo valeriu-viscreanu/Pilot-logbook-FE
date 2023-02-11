@@ -122,5 +122,8 @@
         }
       }
     }},
-  "defaultProject": "Logbook"
+  "defaultProject": "Logbook",
+  "cli": {
+    "analytics": false
+  }
 }
