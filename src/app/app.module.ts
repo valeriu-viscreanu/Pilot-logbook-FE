@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatToolbarModule} from '@angular/material/toolbar'
+
 
 import { AppComponent } from './app.component';
 import { FlightHoursModule } from './flight-hours/flight-hours.module';
@@ -28,7 +30,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     CommonModule,
-    FlightHoursModule
+    FlightHoursModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
