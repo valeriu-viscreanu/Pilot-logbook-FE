@@ -1,4 +1,6 @@
+import { Aircraft } from "./aircraft.model";
+
 export class Flight
  { 
-    constructor(private aircraft:string, private takeoffTime:Date, private landingTime:Date,private pilots: string){}
+    constructor(private aircraft:Aircraft, private takeoffTime:Date, private landingTime:Date,private pilots: string){}
  }
