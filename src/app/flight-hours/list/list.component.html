@@ -1,37 +1,11 @@
-<div class="container p-0">
-    <div class="row p-0 clearfix" >
-        <div class="col border ">
-            <p>Aircraft</p>
-        </div>
-        <div class="col border ">
-            <p>TO time</p>
-        </div>
-        <div class="col border ">
-            <p> LNG time</p>
-        </div>
-        <div class="col border">
-            <p>Pilots</p>
-        </div>
-    </div>
+<h1>Flight Log</h1>
 
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+    <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+    <td mat-cell *matCellDef="let flt">{{ flt[column] }}</td>
+  </ng-container>
 
-
-   
-
-    <a href="#" *ngFor="let flight of Flights" class="flight">
-        <div class="row p-0">
-            <div class="col border">
-                <p> {{flight.aircraft}}</p>
-            </div>
-            <div class="col border">
-                <p> {{flight.takeoffTime | date: 'd/m/y h:mm'}}</p>
-            </div>
-            <div class="col border">
-                <p>  {{flight.landingTime| date: 'd/m/y h:mm'}}</p>
-            </div>
-            <div class="col border">
-                <p>  {{flight.pilots}}</p>
-            </div>
-        </div>
-    </a>
-</div>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let fltrow; columns: displayedColumns"></tr>
+</table>

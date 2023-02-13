@@ -1,4 +1,4 @@
 export class Aircraft
  { 
-    constructor(private name:string, private type:string, private registration: string){}
+    constructor(public name:string, public type:string, public registration: string){}
  }
