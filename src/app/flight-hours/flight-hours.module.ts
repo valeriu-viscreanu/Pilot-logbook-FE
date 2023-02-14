@@ -4,6 +4,7 @@ import { ListComponent } from './list/list.component';
 import { FlightEditComponent } from './list/flight-edit/flight-edit.component';
 import { OverviewComponent } from './list/overview/overview.component';
 import { FlightComponent } from './list/flight/flight.component';
+import { AircraftListComponent } from '../aircraft-list/aircraft-list.component';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
@@ -12,7 +13,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
-  declarations: [ListComponent, FlightEditComponent, OverviewComponent, FlightComponent],
+  declarations: [ListComponent, 
+    FlightEditComponent, 
+    OverviewComponent, 
+    FlightComponent,  
+    AircraftListComponent],
   imports: [
     CommonModule,
     MatTableModule,    

@@ -14,6 +14,8 @@ import { LongEntryElementComponent } from './log-entry/long-entry-element/long-e
 import { LongEntryEditComponent } from './log-entry/long-entry-edit/long-entry-edit.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LoginComponent } from './login/login.component';
+import {AppRoutingModule} from './app-routing-module'
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     LongEntryElementComponent,
     LongEntryEditComponent,
     AuthenticationComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    AppRoutingModule,
     FlightHoursModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
