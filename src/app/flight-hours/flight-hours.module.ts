@@ -20,8 +20,7 @@ import {MatSortModule} from '@angular/material/sort';
     AircraftListComponent],
   imports: [
     CommonModule,
-    MatTableModule,    
-    MatTableModule,
+    MatTableModule,   
     CommonModule,
     MatInputModule,
     MatSelectModule,
