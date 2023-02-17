@@ -18,9 +18,9 @@ export class DashboardElementComponent {
       }
 
       return [
-        { title: 'Total hours', content: "test", cols: 1, rows: 1 },
-        { title: 'Last Flight', cols: 1, rows: 1 },
-        { title: 'Statistics', cols: 2, rows: 1 },
+        { title: 'Total hours', content: "108 hours", cols: 1, rows: 1 },
+        { title: 'Last Flight', content: "12 January 2023 - DA 40 - N5FL", cols: 1, rows: 1 },
+        { title: 'Statistics', content: "Last Month flown a total of 14 Hours - 12.1 Daytime - 21. Night - 1.3 IFR",cols: 2, rows: 1 },
       ];
     })
   );
