@@ -9,6 +9,10 @@
     min-width: 300px;
   }
 
+  p{    
+    max-height: 4em;
+  }
+
   mat-card-title,
   mat-card-content {
     display: flex;
