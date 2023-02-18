@@ -11,22 +11,23 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatSortModule} from '@angular/material/sort';
+import { AppModule } from "../app.module";
 
 @NgModule({
-  declarations: [ListComponent, 
-    FlightEditComponent, 
-    OverviewComponent, 
-    FlightComponent,  
-    AircraftListComponent],
-  imports: [
-    CommonModule,
-    MatTableModule,   
-    CommonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatCardModule,
-    MatSortModule
-  ],
-  exports: [ListComponent, OverviewComponent]
+    declarations: [ListComponent,
+        FlightEditComponent,
+        OverviewComponent,
+        FlightComponent,
+        AircraftListComponent],
+    exports: [ListComponent, OverviewComponent],
+    imports: [
+        CommonModule,
+        MatTableModule,
+        CommonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatCardModule,
+        MatSortModule
+    ]
 })
 export class FlightHoursModule { }
