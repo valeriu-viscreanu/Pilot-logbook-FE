@@ -6,3 +6,12 @@ a {
 a.flight:nth-of-type(3n) .row{
     background: lightgrey;
   }
+  .title {
+    padding: 10px;
+  }
+ .add-new-flight {
+    border-radius: 5px;
+    background-color: rgb(47, 47, 223);
+    color: white;
+    padding: 5px 10px;
+  }

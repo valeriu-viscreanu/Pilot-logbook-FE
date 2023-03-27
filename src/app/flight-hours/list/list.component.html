@@ -1,4 +1,6 @@
-<h1>Flight Log</h1>
+<h1 class="title">Flight Log</h1>
+
+<button mat-raised-button class="add-new-flight" (click)="addNewFlight()">Add New Item</button>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
@@ -7,5 +9,31 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let fltrow; columns: displayedColumns"></tr>
+  <tr mat-row *matRowDef="let fltrow; columns: displayedColumns" (click)="editFlight(fltrow)"></tr>
 </table>
+
+<ng-template #editDialog let-data>
+  <h2 mat-dialog-title>Edit Flight Details</h2>
+  <mat-dialog-content>
+    <form [formGroup]="editForm">
+      <mat-form-field>
+        <input matInput placeholder="Aircraft" formControlName="aircraft">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Takeoff Time" formControlName="takeoffTime">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Landing Time" formControlName="landingTime">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Pilots" formControlName="pilots">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="!editForm.valid" (click)="onSaveClick()">Save</button>
+  </mat-dialog-actions>
+</ng-template>
+
+Edit buttons not visible

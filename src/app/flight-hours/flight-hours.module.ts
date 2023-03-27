@@ -11,7 +11,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatSortModule} from '@angular/material/sort';
-import { AppModule } from "../app.module";
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [ListComponent,
@@ -24,10 +26,12 @@ import { AppModule } from "../app.module";
         CommonModule,
         MatTableModule,
         CommonModule,
+        ReactiveFormsModule,
         MatInputModule,
         MatSelectModule,
         MatCardModule,
-        MatSortModule
+        MatSortModule,
+        MatDialogModule
     ]
 })
 export class FlightHoursModule { }
